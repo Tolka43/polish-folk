@@ -32,8 +32,6 @@ input, select {
 }
 
 .content-div {
-    border: 1px solid black;
-    margin: 10px;
     padding: 10px;
 }
 
@@ -285,7 +283,7 @@ a:hover {
     }
 
     #wrapper {
-        padding: 100px 15px 0 15px;
+        padding: 100px 0 0 0;
     }
 
     table {
