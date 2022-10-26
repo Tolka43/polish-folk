@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tańce ludowe</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <a class="on-big-desktop" href="index.html">
+        <img class="nav-img" src="img/nav-img.png" alt="" /></a>
+      <a class="on-small-desktop" href="index.html">
+        <img class="nav-img" src="img/nav-img.png" alt="" /></a>
+      <a class="menu-item main-menu-item" href="index.html">strona główna</a>
+      <a class="menu-item" href="photos-gallery.html">galeria</a>
+      <div class="dropdown on-big-desktop">
+        <button class="dropbtn menu-item">O nas</button>
+        <div class="dropdown-content">
+          <a href="contact.html">kontakt</a>
+        </div>
+      </div>
+      <a class="menu-item on-small-desktop" href="contact.html">kontakt</a>
+  </nav>
+  <div class="form-container">
+    <form action="">
+      <div class="form-header">
+        <p> Skontaktuj się z nami!</p>
+      </div>
+      <div class="user-data-form">
+        <p id="user-data-label">imię:</p>
+        <input class="user-data-input" id="nationaldancesque" type="text" />
+      </div>
+      <div class="user-data-form">
+        <p id="user-data-label">pseudonim:</p>
+        <input class="user-data-input" id="nationaldancesque" type="text" />
+      </div>
+      <div class="user-data-form">
+        <p id="user-data-label">adres email:</p>
+        <input class="user-data-input" type="email" name="" id="">
+      </div>
+      <div class="form-element">
+        <label for="#rate">oceń stronę:</label>
+        <input type="range" name="" id="rate" />
+      </div>
+      <select class="form-element" id="favorite-folk-costume" name="cars">
+        <option value="">Który strój ludowy najbardziej ci się podoba?</option>
+        <option value="kontusz-szlachecki">kontusz szlachecki</option>
+        <option value="stroj-lowicki">strój łowicki</option>
+        <option value="stroj-krakowski">strój krakowski</option>
+      </select>
+      <fieldset>
+        <legend>Czy chcesz zapisać się do newslettera?</legend>
+        <div class="form-element">
+          <input type="radio" id="huey" name="drone" value="huey" checked />
+          <label for="huey">Tak, chcę!</label>
+        </div>
+
+        <div>
+          <input type="radio" id="dewey" name="drone" value="dewey" />
+          <label for="dewey">Nie chcę</label>
+        </div>
+      </fieldset>
+      <div class="form-element">
+        <input type="checkbox" name="" id="checkbox" />
+        <label class="agreement-checkbox" for="#checkbox">*wyrażam zgodę na przetwarzanie danych osobowych</label>
+      </div>
+      <button class="submit-button" type="submit">zatwierdź</button>
+      <input class="reset-button" type="reset" value="wyczyść formularz" />
+
+    </form>
+  </div>
+  <footer></footer>
+</body>
+
+</html>

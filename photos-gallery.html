@@ -1,83 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="/favicons/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Tańce ludowe</title>
-  </head>
-  <body>
-    <nav>
-      <div class="menu">
-        <a href="index.html">
-          <img class="nav-img" src="img/nav-img.png" alt=""
-        /></a>
-        <a class="menu-item main-menu-item" href="index.html">strona główna</a>
-        <a class="menu-item" href="photos-gallery.html">galeria zdjęć</a>
-        <a class="menu-item" href="quiz.html">quiz</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tańce ludowe</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <a class="on-big-desktop" href="index.html">
+        <img class="nav-img" src="img/nav-img.png" alt="" /></a>
+      <a class="on-small-desktop" href="index.html">
+        <img class="nav-img" src="img/nav-img.png" alt="" /></a>
+      <a class="menu-item main-menu-item" href="index.html">strona główna</a>
+      <a class="menu-item" href="photos-gallery.html">galeria</a>
+      <div class="dropdown on-big-desktop">
+        <button class="dropbtn menu-item">O nas</button>
+        <div class="dropdown-content">
+          <a href="contact.html">kontakt</a>
+        </div>
       </div>
-    </nav>
-    <div id="wrapper" class="modal">
-      <div class="photos-gallery">
-        <div class="gallery-item">
-          <a target="_blank" href="img/kontusz-szlachecki.jpg">
-            <img class="gallery-img" src="img/kontusz-szlachecki.jpg" alt=""
-          /></a>
-          <div class="img-descr">kontusz szlachecki</div>
-        </div>
-        <div class="gallery-item">
-          <a target="_blank" href="img/stroj-lasowiacki.jpg">
-            <img class="gallery-img" src="img/stroj-lasowiacki.jpg" alt=""
-          /></a>
-          <div class="img-descr">strój lasowiacki</div>
-        </div>
-        <div class="gallery-item">
-          <a href="img/stroj-lowicki.jpg" target="_blank">
-            <img class="gallery-img" src="img/stroj-lowicki.jpg" alt=""
-          /></a>
-          <div class="img-descr">strój łowicki</div>
-        </div>
-        <div class="gallery-item">
-          <a target="_blank" href="img/stroj-lubelski.jpg">
-            <img class="gallery-img" src="img/stroj-lubelski.jpg" alt=""
-          /></a>
-          <div class="img-descr">strój lubelski</div>
-        </div>
-        <div class="gallery-item">
-          <a target="_blank" href="img/stroj-rzeszowski.jpg">
-            <img class="gallery-img" src="img/stroj-rzeszowski.jpg" alt=""
-          /></a>
-          <div class="img-descr">strój rzeszowski</div>
-        </div>
-        <div class="gallery-item">
-          <a target="_blank" href="img/stroj-krakowski.jpg">
-            <img class="gallery-img" src="img/stroj-krakowski.jpg" alt=""
-          /></a>
-          <div class="img-descr">strój krakowski</div>
-        </div>
+      <a class="menu-item on-small-desktop" href="contact.html">kontakt</a>
+  </nav>
+  <div id="wrapper" class="modal">
+    <div class="photos-gallery">
+      <div class="gallery-item">
+        <a target="_blank" href="img/kontusz-szlachecki.jpg">
+          <img class="gallery-img" src="img/kontusz-szlachecki.jpg" alt="" /></a>
+        <div class="img-descr">kontusz szlachecki</div>
+      </div>
+      <div class="gallery-item">
+        <a target="_blank" href="img/stroj-lasowiacki.jpg">
+          <img class="gallery-img" src="img/stroj-lasowiacki.jpg" alt="" /></a>
+        <div class="img-descr">strój lasowiacki</div>
+      </div>
+      <div class="gallery-item">
+        <a href="img/stroj-lowicki.jpg" target="_blank">
+          <img class="gallery-img" src="img/stroj-lowicki.jpg" alt="" /></a>
+        <div class="img-descr">strój łowicki</div>
+      </div>
+      <div class="gallery-item">
+        <a target="_blank" href="img/stroj-lubelski.jpg">
+          <img class="gallery-img" src="img/stroj-lubelski.jpg" alt="" /></a>
+        <div class="img-descr">strój lubelski</div>
+      </div>
+      <div class="gallery-item">
+        <a target="_blank" href="img/stroj-rzeszowski.jpg">
+          <img class="gallery-img" src="img/stroj-rzeszowski.jpg" alt="" /></a>
+        <div class="img-descr">strój rzeszowski</div>
+      </div>
+      <div class="gallery-item">
+        <a target="_blank" href="img/stroj-krakowski.jpg">
+          <img class="gallery-img" src="img/stroj-krakowski.jpg" alt="" /></a>
+        <div class="img-descr">strój krakowski</div>
       </div>
     </div>
+  </div>
+  <footer>© 2022 Olga Tomczyk</footer>
+</body>
 
-    <footer><p>© Olga Tomczyk 2022</p></footer>
-  </body>
 </html>
