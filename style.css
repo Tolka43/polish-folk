@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Inconsolata&family=Mali&display=swap');
 
+html {
+    min-height: 100vh;
+    overflow: auto;
+}
+
 body {
-    background-color: #ccc;
+    background-color: rgb(230, 230, 230);
     height: fit-content;
     margin: 0px;
     color: rgb(40, 40, 40);
@@ -10,24 +15,41 @@ body {
 
 #wrapper {
     padding: 10px 10px 10px 270px;
+    height: 100%;
+    overflow: auto;
 }
 
-a,
-a:checked {
+#text-content {
+    padding: 15px 50px 15px 320px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 10px rgb(201, 201, 201);
+}
+
+footer {
+    padding-left: 250px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+a {
     color: black;
     text-decoration: none;
 }
+
 
 a:hover {
     cursor: pointer;
 }
 
-.on-small-desktop {
-    display: none;
+
+
+button > a {
+    color: white;
 }
 
-.content-div {
-    padding: 10px;
+.for-small-desktop,
+.for-mobile-screen {
+    display: none;
 }
 
 .center-element {
@@ -38,8 +60,6 @@ a:hover {
 .content-img {
     max-width: 60vw;
 }
-
-
 
 h1 {
     margin: 0px;
@@ -57,10 +77,8 @@ p {
     padding-left: 10px;
 }
 
-
-
 .nav-img {
-    opacity: 50%;
+    opacity: 80%;
     width: 250px;
 }
 
@@ -74,8 +92,7 @@ p {
     overflow: hidden;
     height: 100vh;
     background-color: rgb(66, 66, 66);
-
-    box-shadow: 1px 1px 4px #686868ad;
+    box-shadow: 1px 1px 5px #686868ad;
 }
 
 .menu-item {
@@ -84,19 +101,18 @@ p {
     margin: 0 20px;
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(230, 230, 230);
 }
 
-footer {
-    padding-left: 250px;
-    text-align: center;
+.menu-item:hover {
+    background-color: rgb(70, 70, 70);
 }
 
 
 
 /* ---------------------------------------------------> dropdown <------------------------------------------- */
 
-.dropbtn {
+.dropdown-button {
     background-color: rgb(66, 66, 66);
     color: white;
     padding: 10%;
@@ -106,7 +122,7 @@ footer {
     font-family: 'Mali', cursive;
     width: 210px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(230, 230, 230);
     font-size: 16px;
     cursor: pointer;
 }
@@ -121,7 +137,6 @@ footer {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(76, 76, 76);
     width: 210px;
     left: 20px;
     z-index: 1;
@@ -131,6 +146,7 @@ footer {
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
+    text-align: center;
     text-decoration: none;
     display: block;
 }
@@ -138,11 +154,22 @@ footer {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    background-color: rgb(70, 70, 70);
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(75, 75, 75);
 }
 
 
 /* --------------------------------------------> landing page styles <----------------------------------- */
 
+
+.landing-page-img-div {
+    margin-left: 250px;
+    position: relative;
+    text-align: center;
+}
 
 .landing-page-img {
     width: 100%;
@@ -150,15 +177,8 @@ footer {
     object-fit: cover;
 }
 
-.landing-page-img-div {
-    margin-left: 250px;
-    position: relative;
-    text-align: center;
-
-}
-
 .title {
-    color: #ccc;
+    color: rgb(230, 230, 230);
     font-weight: 100;
 }
 
@@ -184,24 +204,29 @@ footer {
     cursor: pointer;
 }
 
-.container {
-    position: relative;
-    text-align: center;
-    color: white;
-}
+/* ---------------------------------------------------> table styles <-----------------------------------------------------  ZROBIONE */
 
-/* ---------------------------------------------------> table styles <----------------------------------------------------- */
+.t-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 table {
     border-collapse: collapse;
     width: 540px;
 }
 
+li::marker {
+    content: '- ';
+}
+
 thead {
     background-color: rgb(66, 66, 66);
     color: white;
 }
-
 
 th {
     padding: 20px;
@@ -213,36 +238,19 @@ td {
     width: 270px;
 }
 
-
 .t-content {
-    border: 2px solid rgb(82, 82, 82);
-}
-
-.t-first-row {
-    border-bottom: 1px solid rgb(82, 82, 82);
+    box-shadow: 1px 10px 10px rgb(225, 225, 225);
 }
 
 .left-col-td {
-    border-right: 1px solid rgb(82, 82, 82);
-}
-
-.t-headers {
-    margin-bottom: 5px;
-}
-
-
-.t-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-right: 1px dashed rgb(130, 130, 130);
 }
 
 
 /* ----------------------------------------------------> photos gallery <-------------------------------------------------- */
 
 .photos-gallery {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -259,15 +267,15 @@ td {
 }
 
 .gallery-item {
-    margin: 5px;
-    border: 1px solid #ccc;
+    margin: 10px;
     width: 180px;
+    box-shadow: 1px 10px 10px rgb(200, 200, 200);
 }
 
 .img-descr {
     padding: 15px;
     text-align: center;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 255, 255);
 }
 
 .gallery-img:hover {
@@ -329,6 +337,7 @@ form {
     width: 100%;
 }
 
+
 .form-element {
     margin: 15px 0;
 }
@@ -337,7 +346,25 @@ form {
     font-size: small;
 }
 
-#favorite-folk-costume {
+form>p {
+    color: rgb(157, 9, 9);
+}
+
+#user-data-label,
+label {
+    color: rgb(66, 66, 66);
+    font-size: smaller;
+}
+
+input[type="email"]:invalid {
+    color: rgb(125, 125, 125);
+}
+
+.user-data-form>input {
+    font-family: 'Mali', cursive;
+}
+
+#choose-folk-costume {
     border: none;
     outline: none;
     border-bottom: 1px solid rgba(201, 199, 199, 0.8);
@@ -348,8 +375,9 @@ form {
 }
 
 fieldset {
-    border: 1px solid rgba(201, 199, 199, 0.8);
+    border: none;
 }
+
 
 
 /* form buttons */
@@ -389,40 +417,25 @@ fieldset {
     color: rgb(120, 120, 120);
 }
 
-
-
-/* ---------------------------------------------------------> dropdown <---------------------------------------------------------- */
-
-
-.drop-button {
-    background-color: rgb(66, 66, 66);
-    color: white;
-    padding: 10%;
-    margin: 0 20px;
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0%;
-    box-shadow: none;
-    width: 210px;
-    font-size: 16px;
-    font-family: 'Mali', cursive;
-}
-
-
 /* ---------------------------------------------------------> media query <---------------------------------------------------------- */
 
 
 
 @media only screen and (max-width: 1040px) {
 
-    .on-small-desktop {
+    footer {
+        padding-left: 0;
+    }
+
+    body {
+        background-color: #ccc;
+    }
+
+    .for-small-desktop {
         display: block;
     }
 
-    .on-big-desktop {
+    .for-big-desktop {
         display: none;
     }
 
@@ -449,6 +462,10 @@ fieldset {
         border-bottom: none;
         font-size: 35px;
         font-family: 'Amatic SC', cursive;
+    }
+
+    .menu-item:hover {
+        background-color: #ccc;
     }
 
     .landing-page-img-div {
@@ -483,40 +500,18 @@ fieldset {
         padding: 120px 0 0 0;
     }
 
-
-    .form-header {
+    #text-content {
+        padding: 120px 15px 15px 15px;
         background-color: white;
-    }
-
-    .form-header>p {
-        color: black;
-        font-weight: 500;
-        font-family: 'Mali', cursive;
-    }
-
-    .form-container {
-        padding: 120px 0 0 0;
-    }
-
-    form {
-        width: 100vw;
-        margin: 0 auto;
         box-shadow: none;
     }
 
-    .user-data-form {
-        width: 98%;
-    }
 
-    fieldset {
-        width: 90%;
+    .form-container {
+        height: 652.2px;
+        align-items: flex-start;
+        padding: 100px 0 0 0;
     }
-
-    #favorite-folk-costume {
-        width: 99%;
-        font-size: 15px;
-    }
-
 
     table {
         display: none;
@@ -538,5 +533,55 @@ fieldset {
 
     img.content-img {
         min-width: 80vw;
+    }
+
+    .gallery-item {
+        box-shadow: 1px 10px 10px rgb(178, 178, 178);
+    }
+
+    .img-descr {
+        background-color: rgb(241, 241, 241);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .form-container {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .for-mobile-screen {
+        margin: 0;
+        display:block;
+        position: absolute;
+        z-index: 20;
+        top: 10px;
+        right: 10px;
+        color: rgb(225, 225, 225);
+        font-weight: 500;
+
+    }
+
+    form {
+        position: relative;
+        z-index: 10;
+        top: 0px;
+        height: 100vh;
+        width: 100vw;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+
+    .user-data-form {
+        width: 98%;
+    }
+
+    fieldset {
+        width: 90%;
+    }
+
+    #choose-folk-costume {
+        width: 99%;
+        font-size: 15px;
     }
 }
